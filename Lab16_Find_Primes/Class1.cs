@@ -2,6 +2,15 @@
 {
     class Class1
     {
+        // public class Hiker
+        // {
+        //     public static int Answer(int x)
+        //     {
+        //         int[] primeNums = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37 };
+        //
+        //         return primeNums[x - 1];
+        //     }
+        // }
         // public class HikerTest
         // {
         //     [Test]

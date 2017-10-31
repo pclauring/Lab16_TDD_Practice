@@ -11,26 +11,27 @@ namespace Lab16_Find_Primes
 
             Console.WriteLine("Let's Locate Some Primes!\n");
             Console.WriteLine("This application will find you any prime, in order, from first prime on.");
+            int[] generatedPrimes;
+            int arrayPrime;
+            int num = 100;
 
-            // int num = 100;
-            //
-            //     bool isPrime = true;
-            //     for (int i = 0; i <= num; i++)
-            //     {
-            //         for (int j = 2; j <= num; j++)
-            //         {
-            //             if (i != j && i % j == 0)
-            //             {
-            //                 isPrime = false;
-            //                 break;
-            //             }
-            //         }
-            //         if (isPrime)
-            //         {
-            //             Console.WriteLine(i);
-            //         }
-            //         isPrime = true;
-            // }
+            bool isPrime = true;
+            for (int i = 0; i <= num; i++)
+            {
+                for (int j = 2; j <= num; j++)
+                {
+                    if (i != j && i % j == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime)
+                {
+                    arrayPrime = i;
+                }
+                isPrime = true;
+            }
 
             do
             {
