@@ -7,13 +7,13 @@ namespace Lab16_Find_Primes
         static void Main(string[] args)
         {
             bool repeat;
-            int[] primeNums = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37 };
+            //int[] primeNums = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37 };
 
             Console.WriteLine("Let's Locate Some Primes!\n");
             Console.WriteLine("This application will find you any prime, in order, from first prime on.");
-            int[] generatedPrimes;
-            int arrayPrime;
+
             int num = 100;
+            string listOfPrimes = "";
 
             bool isPrime = true;
             for (int i = 0; i <= num; i++)
@@ -28,9 +28,15 @@ namespace Lab16_Find_Primes
                 }
                 if (isPrime)
                 {
-                    arrayPrime = i;
+                    listOfPrimes += i;
+                    listOfPrimes += " ";
                 }
                 isPrime = true;
+            }
+            string[] seperatedPrimes = listOfPrimes.Split(' ');
+            foreach (string item in seperatedPrimes)
+            {
+                Console.WriteLine(item);
             }
 
             do
@@ -43,13 +49,13 @@ namespace Lab16_Find_Primes
                 {
                     success = int.TryParse(Console.ReadLine(), out primeSequence);
 
-                    if (primeSequence < 1 || primeSequence > 12)
+                    if (primeSequence < 1 || primeSequence > 20)
                     {
                         success = false;
                     }
                 }
 
-                Console.WriteLine($"The number {primeSequence} is {primeNums[primeSequence - 1]}\n");
+                Console.WriteLine($"The number {primeSequence} is {seperatedPrimes[primeSequence - 1]}\n");
                 Console.WriteLine("Do you want to find a new prime number?(y/n)\n");
                 repeat = GetYesorNo();
             } while (repeat);
