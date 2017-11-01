@@ -16,11 +16,11 @@ namespace Lab16_Find_Primes
             string listOfPrimes = "";
 
             bool isPrime = true;
-            for (int i = 0; i <= num; i++)
+            for (int i = 2; i <= num; i++)
             {
-                for (int j = 2; j <= num; j++)
+                for (int j = 2; j <= Math.Sqrt(i); j++)
                 {
-                    if (i != j && i % j == 0)
+                    if (i % j == 0)
                     {
                         isPrime = false;
                         break;
@@ -52,6 +52,7 @@ namespace Lab16_Find_Primes
                     if (primeSequence < 1 || primeSequence > 20)
                     {
                         success = false;
+                        Console.WriteLine("Out of Range... Try a number from 1-20");
                     }
                 }
 
